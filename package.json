@@ -1,0 +1,12 @@
+{
+  "name": "shop-metadata-scrapper",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "dependencies": {
+    "chromedriver": "^145.0.3",
+    "selenium-webdriver": "^4.40.0"
+  }
+}
