@@ -1,10 +1,12 @@
 const fs = require("fs");
 const path = require("path");
 
+const config = require('./config.json');
+
 // Rutas de archivos
-const file1 = path.join(__dirname, "urls-mx-1.txt");
-const file2 = path.join(__dirname, "urls-mx-2.txt");
-const output = path.join(__dirname, "urls-mx.txt");
+const file1 = path.join(__dirname, `urls-${config.regionCode}-1.txt`);
+const file2 = path.join(__dirname, `urls-${config.regionCode}-2.txt`);
+const output = path.join(__dirname, `urls-${config.regionCode}.txt`);
 
 // Leer archivos
 const data1 = fs.readFileSync(file1, "utf8");

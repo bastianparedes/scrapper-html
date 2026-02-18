@@ -1,9 +1,10 @@
 const fs = require("fs");
 const path = require("path");
+const config = require('./config.json');
 
 // Archivos
-const inputFile = path.resolve("data-mx.json");
-const outputFile = path.resolve("output.csv");
+const inputFile = path.resolve(`data-${config.regionCode}.json`);
+const outputFile = path.resolve(`output-${config.regionCode}.csv`);
 
 // Leer JSON
 const rawData = fs.readFileSync(inputFile, "utf8");
