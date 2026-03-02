@@ -10,7 +10,6 @@ const main = async () => {
     });
 
     for (let record of records) {
-        
         const myHeaders = new Headers();
         myHeaders.append("accept", "*/*");
         myHeaders.append("accept-language", "es-419,es;q=0.9,en;q=0.8");
