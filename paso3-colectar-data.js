@@ -1,6 +1,6 @@
-const { Builder, By, Key, until } = require("selenium-webdriver");
+const { Builder } = require("selenium-webdriver");
 const { appendFile, readFile } = require('fs/promises');
-const config = require('./config.json');
+const config = require('./paso1.config.json');
 
 const urlsFileName = `urls-${config.regionCode}.txt`;
 const jsonFileName = `data-${config.regionCode}.json`;
@@ -21,7 +21,7 @@ async function main() {
   const arrayData = [];
 
   try {
-    await driver.get('https://www.sodimac.com.mx/sodimac-mx/k/cortinero');
+    await driver.get(urls[0]);
     await driver.manage().addCookie({
       name: "EXP_RETAIL_NA",
       value: "200",
@@ -29,7 +29,7 @@ async function main() {
       // domain: "example.com", // opcional si ya estás en el dominio
       // secure: true,
       // httpOnly: true,
-      expiry: Math.floor(Date.now() / 1000) + 3600 // 1 hora
+      expiry: Math.floor(Date.now() / 1000) + 3600 * 5 // 5 horas
     });
 
 

@@ -1,6 +1,6 @@
 const fs = require('fs');
 const { parse } = require('csv-parse/sync');
-const config = require('./config.json');
+const config = require('./paso1.config.json');
 
 const main = async () => {
     const fileContent = fs.readFileSync(`./output-${config.regionCode}.csv`, 'utf8');

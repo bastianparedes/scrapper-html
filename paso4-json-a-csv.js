@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const config = require('./config.json');
+const config = require('./paso1.config.json');
 
 // Archivos
 const inputFile = path.resolve(`data-${config.regionCode}.json`);
